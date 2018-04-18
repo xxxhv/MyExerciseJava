@@ -1,0 +1,38 @@
+
+class Studentr{
+	String name;
+	int age;
+	public Studentr(String name,int age) {
+		this.name=name;
+		this.age=age;
+	}
+	public void show(){
+		System.out.println("name "+name+" age "+age);
+	}
+}
+class Undergraduate extends Studentr{
+	public Undergraduate(String name, int age, String degree) {
+		super(name, age);
+		this.degree=degree;
+	}
+	String degree;
+	public void show(){
+		System.out.println("name "+name+" age "+age+" degree "+degree);
+	}
+}
+
+
+
+
+
+
+public class Task09 {
+
+	public static void main(String[] args) {
+		Studentr aStudent=new Studentr("xiaoming", 15);
+		Undergraduate bUndergraduate=new Undergraduate("daming", 20, "benke");
+		aStudent.show();
+		bUndergraduate.show();
+	}
+
+}
