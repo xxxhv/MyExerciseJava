@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+class Student{
+	private String name;
+	private int age;
+	public Student(int a,String n) {
+		age=a;
+		name=n;
+	}
+	public Student() {
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		if(age>7&&age<30){
+			this.age = age;
+		}else {
+			System.out.println("设置的年龄不是通常值");
+		}
+		}
+	void speak(){
+		System.out.println(" age "+age+" name "+name);
+	}
+	}
+public class Task07 {
+
+	public static void main(String[] args) {
+		System.out.println("欢迎进入综合练习");
+		@SuppressWarnings("resource")
+		Scanner q=new Scanner(System.in);
+		Student s1=new Student();
+		s1.setAge(q.nextInt());
+		s1.setName(q.next());
+		s1.speak();
+	}
+
+}
