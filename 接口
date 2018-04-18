@@ -1,0 +1,33 @@
+
+interface Flyy{
+	void fly();
+}
+class Bird{
+	int leg;
+	void egg(){		
+	}
+}
+class Insert{
+	int leg;
+	void egg(){		
+	}
+}
+
+
+class Dayan extends Bird implements Flyy{
+	int leg=2;
+	public void fly() {
+		System.err.println("i can fly");
+	}	
+}
+
+
+
+public class Task11 {
+
+	public static void main(String[] args) {
+		Dayan aDayan=new Dayan();
+		aDayan.fly();
+	}
+
+}
