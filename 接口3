@@ -1,0 +1,26 @@
+interface Pen{
+void id();
+}
+
+class pencil implements Pen{
+	public void id() {
+		System.out.println("xxx");
+	}
+	void run(){
+		System.out.println("ooo");
+	}
+	
+}
+
+public class Task02 {
+	public static int i=1;
+	public int j=2;
+	public static void main(String[] args) {
+		pencil pencil=new pencil();
+		penid(pencil);
+	}
+	public static void penid(Pen pen) {
+		pen.id();
+		((pencil) pen).run();
+	}
+}
