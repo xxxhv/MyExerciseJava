@@ -1,0 +1,24 @@
+class Dog{
+	int age;
+	String name;
+	public Dog(int age,String name) {
+		this.age=age;
+		this.name=name;
+	}
+	public Dog(int age) {
+		this.age=age;
+		this.name="333";
+	}
+	public void shout(){
+		System.out.println(age+name);
+	}
+}
+
+public class Task03 {
+	public static void main(String[] args) {
+		Dog xxx=new Dog(1, "233");
+		xxx.shout();
+		Dog xx=new Dog(5);
+		xx.shout();
+	}
+}
