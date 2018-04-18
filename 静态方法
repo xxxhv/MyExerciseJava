@@ -1,0 +1,48 @@
+
+class Aanimal{
+	
+}
+interface Eatt{
+	void eat();
+}
+class Ccat extends Aanimal implements Eatt{
+
+	public void eat() {
+		System.out.println("猫吃老鼠");
+	}	
+}
+class Ddog extends Aanimal implements Eatt{
+
+	public void eat() {
+		System.out.println("狗吃骨头");
+	}
+}
+class Ppig extends Aanimal implements Eatt{
+
+	public void eat() {
+		System.out.println("猪吃饲料");
+	}	
+}
+
+public class Task13 {
+	public static void main(String[] args) {
+		Ccat aCcat=new Ccat();
+		Ddog aDdog=new Ddog();
+		Ppig aPpig=new Ppig();
+		
+		aCcat.eat();
+		aDdog.eat();
+		aPpig.eat();
+		
+		eat1(aCcat);
+		eat1(aDdog);
+		eat1(aPpig);
+		
+		System.err.println();
+		
+	}
+  //静态方法
+	public static void eat1(Eatt a) {
+		a.eat();
+	}
+}
