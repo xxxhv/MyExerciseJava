@@ -1,0 +1,27 @@
+class Student1{
+	private String name;
+	private String num;
+	public Student1() {
+		this.name="xiaoming";
+		this.num="11111";
+	}
+	public Student1(String name) {
+		this.name=name;
+		this.num="11111";
+	}
+	public Student1(String name,String num) {
+		this.name=name;
+		this.num=num;
+	}
+	public void speak() {
+		System.out.println("im "+name+" my number is "+num);
+	}
+}
+public class Task05 {
+	public static void main(String[] args) {
+		Student1 A=new Student1();
+		Student1 B=new Student1("xiaohong","2333333");
+		A.speak();
+		B.speak();
+	}
+}
