@@ -1,0 +1,49 @@
+           
+class Studentttt{
+private String name,number,phone;
+private int age;
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getNumber() {
+	return number;
+}
+public void setNumber(String number) {
+	this.number = number;
+}
+public String getPhone() {
+	return phone;
+}
+public void setPhone(String phone) {
+	this.phone = phone;
+}
+public int getAge() {
+	return age;
+}
+public void setAge(int age) {
+	if(age>0){
+	this.age = age;
+	}else if (age<30) {
+	this.age = age;
+	}else {
+		System.out.println("年龄输入不合法");
+	}
+}
+public void fun() {
+	System.out.println(" 姓名： "+name+" 年龄： "+age+" 学号："+number+" 电话："+phone);
+}
+}
+public class Task04 {
+	public static void main(String[] args) {
+		Studentttt liangxianyu=new Studentttt();
+		liangxianyu.setName("梁先余");
+		liangxianyu.setAge(-10);
+		liangxianyu.setAge(20);
+		liangxianyu.setNumber("159110114");
+		liangxianyu.setPhone("15310468688");
+		liangxianyu.fun();		
+	}
+}
