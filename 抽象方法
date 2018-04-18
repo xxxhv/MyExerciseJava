@@ -1,0 +1,54 @@
+
+
+interface Dining{
+	void eat();
+}
+interface Dorm{
+	void sleep();
+}
+class Studentt implements Dining,Dorm{
+	public void sleep() {
+		System.err.println("学生住在宿舍");
+	}
+	public void eat() {
+		System.err.println("学生在食堂吃饭");
+	}	
+}
+class Teacher implements Dining,Dorm{
+	public void sleep() {
+		System.err.println("教师住在学校公寓");
+	}
+	public void eat() {
+		System.err.println("教师在教师食堂吃饭");
+	}	
+}
+class StuParent implements Dining,Dorm{
+	public void sleep() {
+		System.err.println("学生家长住在招待所");
+	}
+	public void eat() {
+		System.err.println("学生家长在招待所吃饭");
+	}	
+}
+
+public class Task12 {
+
+	public static void main(String[] args) {
+		Studentt aStudentt=new Studentt();
+		Teacher aTeacher=new Teacher();
+		StuParent aParent=new StuParent();
+		aStudentt.eat();
+		aStudentt.sleep();
+		aTeacher.eat();
+		aTeacher.sleep();
+		aParent.eat();
+		aParent.sleep();
+		
+		cca(aStudentt);
+	}
+  //静态方法
+	public static void cca(Dining d){
+		Studentt vStudentt=(Studentt)d;
+		vStudentt.eat();
+	}
+}
