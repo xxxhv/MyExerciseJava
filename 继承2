@@ -1,0 +1,35 @@
+class A{
+	static int i;
+
+	void print(){
+		System.out.println("i的值是 "+i);
+	}
+	void display(String s){
+		System.out.println(s);
+	}
+}
+class B extends A{
+	void add(){
+		i=i+20;
+		super.display("[ i+20 ]");
+	}//访问父类
+	void pprint(){
+		System.out.println(i+1);
+	}
+	void print(){
+		System.out.println("233");
+	}//重写
+}
+
+
+public class Task08 {
+	public static void main(String[] args) {
+		A a=new A();
+		A.i=10;
+		a.print();
+		B b=new B();
+		b.add();
+		b.pprint();
+		b.print();
+	}
+}
