@@ -1,0 +1,27 @@
+class CaoC{
+}
+interface Shape{
+	public double area(double a);
+}
+
+class Square implements Shape{
+	public double area(double a) {
+		return a*a;	
+	}
+}
+class Circle implements Shape{
+	public double area(double a) {
+		return 3.14159*a*a;
+	}
+}
+
+
+public class Task10 {
+
+	public static void main(String[] args) {
+		Square qSquare=new Square();
+		System.out.println(qSquare.area(2));
+		Circle qCircle=new Circle();
+		System.out.println(qCircle.area(3));
+	}
+}
